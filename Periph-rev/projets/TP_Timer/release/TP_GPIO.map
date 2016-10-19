@@ -1,0 +1,482 @@
+Archive member included because of file (symbol)
+
+c:/program files (x86)/codesourcery/sourcery g++ lite/bin/../lib/gcc/arm-none-eabi/4.3.2/thumb2\libgcc.a(_arm_addsubdf3.o)
+                              ./release/timer.o (__aeabi_f2d)
+c:/program files (x86)/codesourcery/sourcery g++ lite/bin/../lib/gcc/arm-none-eabi/4.3.2/thumb2\libgcc.a(_arm_muldivdf3.o)
+                              ./release/timer.o (__aeabi_ddiv)
+c:/program files (x86)/codesourcery/sourcery g++ lite/bin/../lib/gcc/arm-none-eabi/4.3.2/thumb2\libgcc.a(_arm_truncdfsf2.o)
+                              ./release/timer.o (__aeabi_d2f)
+c:/program files (x86)/codesourcery/sourcery g++ lite/bin/../lib/gcc/arm-none-eabi/4.3.2/thumb2\libgcc.a(_arm_addsubsf3.o)
+                              ./release/timer.o (__aeabi_fsub)
+c:/program files (x86)/codesourcery/sourcery g++ lite/bin/../lib/gcc/arm-none-eabi/4.3.2/thumb2\libgcc.a(_arm_muldivsf3.o)
+                              ./release/timer.o (__aeabi_fmul)
+c:/program files (x86)/codesourcery/sourcery g++ lite/bin/../lib/gcc/arm-none-eabi/4.3.2/thumb2\libgcc.a(_arm_cmpsf2.o)
+                              ./release/timer.o (__aeabi_fcmpeq)
+c:/program files (x86)/codesourcery/sourcery g++ lite/bin/../lib/gcc/arm-none-eabi/4.3.2/thumb2\libgcc.a(_arm_fixsfsi.o)
+                              ./release/timer.o (__aeabi_f2iz)
+c:/program files (x86)/codesourcery/sourcery g++ lite/bin/../lib/gcc/arm-none-eabi/4.3.2/thumb2\libgcc.a(_arm_fixunssfsi.o)
+                              ./release/timer.o (__aeabi_f2uiz)
+
+Allocating common symbols
+Common symbol       size              file
+
+psc                 0x4               ./release/timer.o
+arr                 0x4               ./release/timer.o
+freq                0x4               ./release/timer.o
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+FLASH            0x08000000         0x00020000         xr
+RAM              0x20000000         0x00005000         rw
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD ./release/clock.o
+LOAD ./release/gpio.o
+LOAD ./release/timer.o
+LOAD ./release/main.o
+LOAD ./release/startup-gcc.o
+LOAD c:/program files (x86)/codesourcery/sourcery g++ lite/bin/../lib/gcc/arm-none-eabi/4.3.2/../../../../arm-none-eabi/lib/thumb2\libm.a
+START GROUP
+LOAD c:/program files (x86)/codesourcery/sourcery g++ lite/bin/../lib/gcc/arm-none-eabi/4.3.2/thumb2\libgcc.a
+LOAD c:/program files (x86)/codesourcery/sourcery g++ lite/bin/../lib/gcc/arm-none-eabi/4.3.2/../../../../arm-none-eabi/lib/thumb2\libc.a
+END GROUP
+START GROUP
+LOAD c:/program files (x86)/codesourcery/sourcery g++ lite/bin/../lib/gcc/arm-none-eabi/4.3.2/thumb2\libgcc.a
+LOAD c:/program files (x86)/codesourcery/sourcery g++ lite/bin/../lib/gcc/arm-none-eabi/4.3.2/../../../../arm-none-eabi/lib/thumb2\libc.a
+LOAD c:/program files (x86)/codesourcery/sourcery g++ lite/bin/../lib/gcc/arm-none-eabi/4.3.2/../../../../arm-none-eabi/lib/thumb2\libm.a
+END GROUP
+
+.text           0x08000000     0x13a0
+ *(.isr_vector)
+ .isr_vector    0x08000000       0xec ./release/startup-gcc.o
+                0x08000000                __isr_vector
+ *(.text*)
+ .text          0x080000ec       0xe0 ./release/clock.o
+                0x080000ec                CLOCK_Configure
+                0x08000190                CLOCK_GetTIMCLK
+                0x080001b4                CLOCK_GetPCLK2
+                0x0800019c                CLOCK_GetHCLK
+                0x080001a8                CLOCK_GetPCLK1
+                0x080001c0                CLOCK_GetADCCLK
+ .text          0x080001cc       0xd4 ./release/gpio.o
+                0x08000270                Port_IO_Blink
+                0x08000204                Port_IO_Init_Input
+                0x0800028c                Port_IO_Read
+                0x080001cc                Port_IO_Init_Output
+                0x08000244                Port_IO_Set
+                0x08000258                Port_IO_Reset
+ .text          0x080002a0      0x1b0 ./release/timer.o
+                0x080002a0                Timer_1234_Init
+ .text          0x08000450       0x64 ./release/main.o
+                0x08000450                main
+ .text          0x080004b4       0x88 ./release/startup-gcc.o
+                0x08000538                EXTI2_IRQHandler
+                0x08000532                DebugMon_Handler
+                0x08000538                TIM1_CC_IRQHandler
+                0x08000528                HardFault_Handler
+                0x08000536                SysTick_Handler
+                0x08000538                PVD_IRQHandler
+                0x08000534                PendSV_Handler
+                0x08000526                NMI_Handler
+                0x08000538                EXTI3_IRQHandler
+                0x08000538                DMAChannel7_IRQHandler
+                0x08000538                EXTI0_IRQHandler
+                0x08000538                I2C2_EV_IRQHandler
+                0x08000538                DMAChannel1_IRQHandler
+                0x0800052e                UsageFault_Handler
+                0x08000538                SPI1_IRQHandler
+                0x08000538                TAMPER_IRQHandler
+                0x08000538                DMAChannel4_IRQHandler
+                0x08000538                USART3_IRQHandler
+                0x08000538                RTC_IRQHandler
+                0x080004b4                Reset_Handler
+                0x08000538                CAN1_RX1_IRQHandler
+                0x08000538                TIM4_IRQHandler
+                0x08000538                I2C1_EV_IRQHandler
+                0x08000538                TIM3_IRQHandler
+                0x08000538                RCC_IRQHandler
+                0x08000538                TIM1_TRG_COM_IRQHandler
+                0x08000538                EXTI15_10_IRQHandler
+                0x08000538                ADC_IRQHandler
+                0x08000538                DMAChannel5_IRQHandler
+                0x08000538                EXTI9_5_IRQHandler
+                0x08000538                DMAChannel2_IRQHandler
+                0x08000538                SPI2_IRQHandler
+                0x0800052a                MemManage_Handler
+                0x08000530                SVC_Handler
+                0x08000538                EXTI4_IRQHandler
+                0x08000538                USB_LP_CAN1_RX0_IRQHandler
+                0x08000524                SystemInit
+                0x08000538                USB_HP_CAN1_TX_IRQHandler
+                0x08000538                TIM1_UP_IRQHandler
+                0x08000538                WWDG_IRQHandler
+                0x08000538                TIM2_IRQHandler
+                0x08000538                TIM1_BRK_IRQHandler
+                0x08000538                EXTI1_IRQHandler
+                0x08000538                RTCAlarm_IRQHandler
+                0x08000538                USART2_IRQHandler
+                0x08000538                I2C2_ER_IRQHandler
+                0x08000538                CAN1_SCE_IRQHandler
+                0x08000538                FLASH_IRQHandler
+                0x08000538                DMAChannel6_IRQHandler
+                0x08000538                DMAChannel3_IRQHandler
+                0x0800052c                BusFault_Handler
+                0x08000538                USART1_IRQHandler
+                0x08000538                I2C1_ER_IRQHandler
+                0x08000538                USBWakeUp_IRQHandler
+ .text          0x0800053c      0x370 c:/program files (x86)/codesourcery/sourcery g++ lite/bin/../lib/gcc/arm-none-eabi/4.3.2/thumb2\libgcc.a(_arm_addsubdf3.o)
+                0x08000850                __floatdidf
+                0x080007e0                __floatsidf
+                0x080007c0                __aeabi_ui2d
+                0x0800053c                __aeabi_drsub
+                0x08000804                __extendsfdf2
+                0x08000548                __adddf3
+                0x080007c0                __floatunsidf
+                0x08000548                __aeabi_dadd
+                0x08000840                __aeabi_ul2d
+                0x08000544                __aeabi_dsub
+                0x08000840                __floatundidf
+                0x080007e0                __aeabi_i2d
+                0x08000850                __aeabi_l2d
+                0x08000804                __aeabi_f2d
+                0x08000544                __subdf3
+ .text          0x080008ac      0x424 c:/program files (x86)/codesourcery/sourcery g++ lite/bin/../lib/gcc/arm-none-eabi/4.3.2/thumb2\libgcc.a(_arm_muldivdf3.o)
+                0x08000b00                __aeabi_ddiv
+                0x080008ac                __aeabi_dmul
+                0x08000b00                __divdf3
+                0x080008ac                __muldf3
+ .text          0x08000cd0       0xa0 c:/program files (x86)/codesourcery/sourcery g++ lite/bin/../lib/gcc/arm-none-eabi/4.3.2/thumb2\libgcc.a(_arm_truncdfsf2.o)
+                0x08000cd0                __aeabi_d2f
+                0x08000cd0                __truncdfsf2
+ .text          0x08000d70      0x21c c:/program files (x86)/codesourcery/sourcery g++ lite/bin/../lib/gcc/arm-none-eabi/4.3.2/thumb2\libgcc.a(_arm_addsubsf3.o)
+                0x08000d7c                __aeabi_fadd
+                0x08000d78                __subsf3
+                0x08000ee4                __aeabi_i2f
+                0x08000d78                __aeabi_fsub
+                0x08000f10                __floatdisf
+                0x08000ee4                __floatsisf
+                0x08000f00                __floatundisf
+                0x08000edc                __aeabi_ui2f
+                0x08000f10                __aeabi_l2f
+                0x08000f00                __aeabi_ul2f
+                0x08000d70                __aeabi_frsub
+                0x08000edc                __floatunsisf
+                0x08000d7c                __addsf3
+ .text          0x08000f8c      0x2a0 c:/program files (x86)/codesourcery/sourcery g++ lite/bin/../lib/gcc/arm-none-eabi/4.3.2/thumb2\libgcc.a(_arm_muldivsf3.o)
+                0x080010f4                __divsf3
+                0x080010f4                __aeabi_fdiv
+                0x08000f8c                __mulsf3
+                0x08000f8c                __aeabi_fmul
+ .text          0x0800122c       0xe8 c:/program files (x86)/codesourcery/sourcery g++ lite/bin/../lib/gcc/arm-none-eabi/4.3.2/thumb2\libgcc.a(_arm_cmpsf2.o)
+                0x08001300                __aeabi_fcmpgt
+                0x08001234                __lesf2
+                0x0800123c                __nesf2
+                0x080012ec                __aeabi_fcmpge
+                0x0800122c                __gtsf2
+                0x080012d8                __aeabi_fcmple
+                0x0800123c                __eqsf2
+                0x0800123c                __cmpsf2
+                0x08001234                __ltsf2
+                0x080012a0                __aeabi_cfcmple
+                0x0800122c                __gesf2
+                0x080012b0                __aeabi_fcmpeq
+                0x08001298                __aeabi_cfrcmple
+                0x080012c4                __aeabi_fcmplt
+                0x080012a0                __aeabi_cfcmpeq
+ .text          0x08001314       0x4c c:/program files (x86)/codesourcery/sourcery g++ lite/bin/../lib/gcc/arm-none-eabi/4.3.2/thumb2\libgcc.a(_arm_fixsfsi.o)
+                0x08001314                __fixsfsi
+                0x08001314                __aeabi_f2iz
+ .text          0x08001360       0x40 c:/program files (x86)/codesourcery/sourcery g++ lite/bin/../lib/gcc/arm-none-eabi/4.3.2/thumb2\libgcc.a(_arm_fixunssfsi.o)
+                0x08001360                __aeabi_f2uiz
+                0x08001360                __fixunssfsi
+ *(.init)
+ *(.fini)
+ *crtbegin.o(.ctors)
+ *crtbegin?.o(.ctors)
+ *(EXCLUDE_FILE(*crtend.o *crtend?.o) .ctors)
+ *(SORT(.ctors.*))
+ *(.ctors)
+ *crtbegin.o(.dtors)
+ *crtbegin?.o(.dtors)
+ *(EXCLUDE_FILE(*crtend.o *crtend?.o) .dtors)
+ *(SORT(.dtors.*))
+ *(.dtors)
+ *(.rodata*)
+ *(.eh_frame*)
+
+.glue_7         0x080013a0        0x0
+ .glue_7        0x080013a0        0x0 ./release/clock.o
+ .glue_7        0x080013a0        0x0 ./release/gpio.o
+ .glue_7        0x080013a0        0x0 ./release/timer.o
+ .glue_7        0x080013a0        0x0 ./release/main.o
+ .glue_7        0x080013a0        0x0 ./release/startup-gcc.o
+ .glue_7        0x080013a0        0x0 c:/program files (x86)/codesourcery/sourcery g++ lite/bin/../lib/gcc/arm-none-eabi/4.3.2/thumb2\libgcc.a(_arm_addsubdf3.o)
+ .glue_7        0x080013a0        0x0 c:/program files (x86)/codesourcery/sourcery g++ lite/bin/../lib/gcc/arm-none-eabi/4.3.2/thumb2\libgcc.a(_arm_muldivdf3.o)
+ .glue_7        0x080013a0        0x0 c:/program files (x86)/codesourcery/sourcery g++ lite/bin/../lib/gcc/arm-none-eabi/4.3.2/thumb2\libgcc.a(_arm_truncdfsf2.o)
+ .glue_7        0x080013a0        0x0 c:/program files (x86)/codesourcery/sourcery g++ lite/bin/../lib/gcc/arm-none-eabi/4.3.2/thumb2\libgcc.a(_arm_addsubsf3.o)
+ .glue_7        0x080013a0        0x0 c:/program files (x86)/codesourcery/sourcery g++ lite/bin/../lib/gcc/arm-none-eabi/4.3.2/thumb2\libgcc.a(_arm_muldivsf3.o)
+ .glue_7        0x080013a0        0x0 c:/program files (x86)/codesourcery/sourcery g++ lite/bin/../lib/gcc/arm-none-eabi/4.3.2/thumb2\libgcc.a(_arm_cmpsf2.o)
+ .glue_7        0x080013a0        0x0 c:/program files (x86)/codesourcery/sourcery g++ lite/bin/../lib/gcc/arm-none-eabi/4.3.2/thumb2\libgcc.a(_arm_fixsfsi.o)
+ .glue_7        0x080013a0        0x0 c:/program files (x86)/codesourcery/sourcery g++ lite/bin/../lib/gcc/arm-none-eabi/4.3.2/thumb2\libgcc.a(_arm_fixunssfsi.o)
+
+.glue_7t        0x080013a0        0x0
+ .glue_7t       0x080013a0        0x0 ./release/clock.o
+ .glue_7t       0x080013a0        0x0 ./release/gpio.o
+ .glue_7t       0x080013a0        0x0 ./release/timer.o
+ .glue_7t       0x080013a0        0x0 ./release/main.o
+ .glue_7t       0x080013a0        0x0 ./release/startup-gcc.o
+ .glue_7t       0x080013a0        0x0 c:/program files (x86)/codesourcery/sourcery g++ lite/bin/../lib/gcc/arm-none-eabi/4.3.2/thumb2\libgcc.a(_arm_addsubdf3.o)
+ .glue_7t       0x080013a0        0x0 c:/program files (x86)/codesourcery/sourcery g++ lite/bin/../lib/gcc/arm-none-eabi/4.3.2/thumb2\libgcc.a(_arm_muldivdf3.o)
+ .glue_7t       0x080013a0        0x0 c:/program files (x86)/codesourcery/sourcery g++ lite/bin/../lib/gcc/arm-none-eabi/4.3.2/thumb2\libgcc.a(_arm_truncdfsf2.o)
+ .glue_7t       0x080013a0        0x0 c:/program files (x86)/codesourcery/sourcery g++ lite/bin/../lib/gcc/arm-none-eabi/4.3.2/thumb2\libgcc.a(_arm_addsubsf3.o)
+ .glue_7t       0x080013a0        0x0 c:/program files (x86)/codesourcery/sourcery g++ lite/bin/../lib/gcc/arm-none-eabi/4.3.2/thumb2\libgcc.a(_arm_muldivsf3.o)
+ .glue_7t       0x080013a0        0x0 c:/program files (x86)/codesourcery/sourcery g++ lite/bin/../lib/gcc/arm-none-eabi/4.3.2/thumb2\libgcc.a(_arm_cmpsf2.o)
+ .glue_7t       0x080013a0        0x0 c:/program files (x86)/codesourcery/sourcery g++ lite/bin/../lib/gcc/arm-none-eabi/4.3.2/thumb2\libgcc.a(_arm_fixsfsi.o)
+ .glue_7t       0x080013a0        0x0 c:/program files (x86)/codesourcery/sourcery g++ lite/bin/../lib/gcc/arm-none-eabi/4.3.2/thumb2\libgcc.a(_arm_fixunssfsi.o)
+
+.vfp11_veneer   0x080013a0        0x0
+ .vfp11_veneer  0x080013a0        0x0 ./release/clock.o
+ .vfp11_veneer  0x080013a0        0x0 ./release/gpio.o
+ .vfp11_veneer  0x080013a0        0x0 ./release/timer.o
+ .vfp11_veneer  0x080013a0        0x0 ./release/main.o
+ .vfp11_veneer  0x080013a0        0x0 ./release/startup-gcc.o
+ .vfp11_veneer  0x080013a0        0x0 c:/program files (x86)/codesourcery/sourcery g++ lite/bin/../lib/gcc/arm-none-eabi/4.3.2/thumb2\libgcc.a(_arm_addsubdf3.o)
+ .vfp11_veneer  0x080013a0        0x0 c:/program files (x86)/codesourcery/sourcery g++ lite/bin/../lib/gcc/arm-none-eabi/4.3.2/thumb2\libgcc.a(_arm_muldivdf3.o)
+ .vfp11_veneer  0x080013a0        0x0 c:/program files (x86)/codesourcery/sourcery g++ lite/bin/../lib/gcc/arm-none-eabi/4.3.2/thumb2\libgcc.a(_arm_truncdfsf2.o)
+ .vfp11_veneer  0x080013a0        0x0 c:/program files (x86)/codesourcery/sourcery g++ lite/bin/../lib/gcc/arm-none-eabi/4.3.2/thumb2\libgcc.a(_arm_addsubsf3.o)
+ .vfp11_veneer  0x080013a0        0x0 c:/program files (x86)/codesourcery/sourcery g++ lite/bin/../lib/gcc/arm-none-eabi/4.3.2/thumb2\libgcc.a(_arm_muldivsf3.o)
+ .vfp11_veneer  0x080013a0        0x0 c:/program files (x86)/codesourcery/sourcery g++ lite/bin/../lib/gcc/arm-none-eabi/4.3.2/thumb2\libgcc.a(_arm_cmpsf2.o)
+ .vfp11_veneer  0x080013a0        0x0 c:/program files (x86)/codesourcery/sourcery g++ lite/bin/../lib/gcc/arm-none-eabi/4.3.2/thumb2\libgcc.a(_arm_fixsfsi.o)
+ .vfp11_veneer  0x080013a0        0x0 c:/program files (x86)/codesourcery/sourcery g++ lite/bin/../lib/gcc/arm-none-eabi/4.3.2/thumb2\libgcc.a(_arm_fixunssfsi.o)
+
+.janus_2cc_veneer
+                0x080013a0        0x0
+ .janus_2cc_veneer
+                0x080013a0        0x0 ./release/clock.o
+ .janus_2cc_veneer
+                0x080013a0        0x0 ./release/gpio.o
+ .janus_2cc_veneer
+                0x080013a0        0x0 ./release/timer.o
+ .janus_2cc_veneer
+                0x080013a0        0x0 ./release/main.o
+ .janus_2cc_veneer
+                0x080013a0        0x0 ./release/startup-gcc.o
+ .janus_2cc_veneer
+                0x080013a0        0x0 c:/program files (x86)/codesourcery/sourcery g++ lite/bin/../lib/gcc/arm-none-eabi/4.3.2/thumb2\libgcc.a(_arm_addsubdf3.o)
+ .janus_2cc_veneer
+                0x080013a0        0x0 c:/program files (x86)/codesourcery/sourcery g++ lite/bin/../lib/gcc/arm-none-eabi/4.3.2/thumb2\libgcc.a(_arm_muldivdf3.o)
+ .janus_2cc_veneer
+                0x080013a0        0x0 c:/program files (x86)/codesourcery/sourcery g++ lite/bin/../lib/gcc/arm-none-eabi/4.3.2/thumb2\libgcc.a(_arm_truncdfsf2.o)
+ .janus_2cc_veneer
+                0x080013a0        0x0 c:/program files (x86)/codesourcery/sourcery g++ lite/bin/../lib/gcc/arm-none-eabi/4.3.2/thumb2\libgcc.a(_arm_addsubsf3.o)
+ .janus_2cc_veneer
+                0x080013a0        0x0 c:/program files (x86)/codesourcery/sourcery g++ lite/bin/../lib/gcc/arm-none-eabi/4.3.2/thumb2\libgcc.a(_arm_muldivsf3.o)
+ .janus_2cc_veneer
+                0x080013a0        0x0 c:/program files (x86)/codesourcery/sourcery g++ lite/bin/../lib/gcc/arm-none-eabi/4.3.2/thumb2\libgcc.a(_arm_cmpsf2.o)
+ .janus_2cc_veneer
+                0x080013a0        0x0 c:/program files (x86)/codesourcery/sourcery g++ lite/bin/../lib/gcc/arm-none-eabi/4.3.2/thumb2\libgcc.a(_arm_fixsfsi.o)
+ .janus_2cc_veneer
+                0x080013a0        0x0 c:/program files (x86)/codesourcery/sourcery g++ lite/bin/../lib/gcc/arm-none-eabi/4.3.2/thumb2\libgcc.a(_arm_fixunssfsi.o)
+
+.v4_bx          0x080013a0        0x0
+ .v4_bx         0x080013a0        0x0 ./release/clock.o
+ .v4_bx         0x080013a0        0x0 ./release/gpio.o
+ .v4_bx         0x080013a0        0x0 ./release/timer.o
+ .v4_bx         0x080013a0        0x0 ./release/main.o
+ .v4_bx         0x080013a0        0x0 ./release/startup-gcc.o
+ .v4_bx         0x080013a0        0x0 c:/program files (x86)/codesourcery/sourcery g++ lite/bin/../lib/gcc/arm-none-eabi/4.3.2/thumb2\libgcc.a(_arm_addsubdf3.o)
+ .v4_bx         0x080013a0        0x0 c:/program files (x86)/codesourcery/sourcery g++ lite/bin/../lib/gcc/arm-none-eabi/4.3.2/thumb2\libgcc.a(_arm_muldivdf3.o)
+ .v4_bx         0x080013a0        0x0 c:/program files (x86)/codesourcery/sourcery g++ lite/bin/../lib/gcc/arm-none-eabi/4.3.2/thumb2\libgcc.a(_arm_truncdfsf2.o)
+ .v4_bx         0x080013a0        0x0 c:/program files (x86)/codesourcery/sourcery g++ lite/bin/../lib/gcc/arm-none-eabi/4.3.2/thumb2\libgcc.a(_arm_addsubsf3.o)
+ .v4_bx         0x080013a0        0x0 c:/program files (x86)/codesourcery/sourcery g++ lite/bin/../lib/gcc/arm-none-eabi/4.3.2/thumb2\libgcc.a(_arm_muldivsf3.o)
+ .v4_bx         0x080013a0        0x0 c:/program files (x86)/codesourcery/sourcery g++ lite/bin/../lib/gcc/arm-none-eabi/4.3.2/thumb2\libgcc.a(_arm_cmpsf2.o)
+ .v4_bx         0x080013a0        0x0 c:/program files (x86)/codesourcery/sourcery g++ lite/bin/../lib/gcc/arm-none-eabi/4.3.2/thumb2\libgcc.a(_arm_fixsfsi.o)
+ .v4_bx         0x080013a0        0x0 c:/program files (x86)/codesourcery/sourcery g++ lite/bin/../lib/gcc/arm-none-eabi/4.3.2/thumb2\libgcc.a(_arm_fixunssfsi.o)
+
+.ARM.extab
+ *(.ARM.extab* .gnu.linkonce.armextab.*)
+                0x080013a0                __exidx_start = .
+
+.ARM.exidx
+ *(.ARM.exidx* .gnu.linkonce.armexidx.*)
+                0x080013a0                __exidx_end = .
+                0x080013a0                __etext = .
+
+.data           0x20000000        0x0 load address 0x080013a0
+                0x20000000                __data_start__ = .
+ *(vtable)
+ *(.data*)
+ .data          0x20000000        0x0 ./release/clock.o
+ .data          0x20000000        0x0 ./release/gpio.o
+ .data          0x20000000        0x0 ./release/timer.o
+ .data          0x20000000        0x0 ./release/main.o
+ .data          0x20000000        0x0 ./release/startup-gcc.o
+ .data          0x20000000        0x0 c:/program files (x86)/codesourcery/sourcery g++ lite/bin/../lib/gcc/arm-none-eabi/4.3.2/thumb2\libgcc.a(_arm_addsubdf3.o)
+ .data          0x20000000        0x0 c:/program files (x86)/codesourcery/sourcery g++ lite/bin/../lib/gcc/arm-none-eabi/4.3.2/thumb2\libgcc.a(_arm_muldivdf3.o)
+ .data          0x20000000        0x0 c:/program files (x86)/codesourcery/sourcery g++ lite/bin/../lib/gcc/arm-none-eabi/4.3.2/thumb2\libgcc.a(_arm_truncdfsf2.o)
+ .data          0x20000000        0x0 c:/program files (x86)/codesourcery/sourcery g++ lite/bin/../lib/gcc/arm-none-eabi/4.3.2/thumb2\libgcc.a(_arm_addsubsf3.o)
+ .data          0x20000000        0x0 c:/program files (x86)/codesourcery/sourcery g++ lite/bin/../lib/gcc/arm-none-eabi/4.3.2/thumb2\libgcc.a(_arm_muldivsf3.o)
+ .data          0x20000000        0x0 c:/program files (x86)/codesourcery/sourcery g++ lite/bin/../lib/gcc/arm-none-eabi/4.3.2/thumb2\libgcc.a(_arm_cmpsf2.o)
+ .data          0x20000000        0x0 c:/program files (x86)/codesourcery/sourcery g++ lite/bin/../lib/gcc/arm-none-eabi/4.3.2/thumb2\libgcc.a(_arm_fixsfsi.o)
+ .data          0x20000000        0x0 c:/program files (x86)/codesourcery/sourcery g++ lite/bin/../lib/gcc/arm-none-eabi/4.3.2/thumb2\libgcc.a(_arm_fixunssfsi.o)
+                0x20000000                . = ALIGN (0x4)
+                0x20000000                PROVIDE (__preinit_array_start, .)
+ *(.preinit_array)
+                0x20000000                PROVIDE (__preinit_array_end, .)
+                0x20000000                . = ALIGN (0x4)
+                0x20000000                PROVIDE (__init_array_start, .)
+ *(SORT(.init_array.*))
+ *(.init_array)
+                0x20000000                PROVIDE (__init_array_end, .)
+                0x20000000                . = ALIGN (0x4)
+                0x20000000                PROVIDE (__fini_array_start, .)
+ *(SORT(.fini_array.*))
+ *(.fini_array)
+                0x20000000                PROVIDE (__fini_array_end, .)
+                0x20000000                . = ALIGN (0x4)
+                0x20000000                __data_end__ = .
+
+.bss            0x20000000        0xc load address 0x080013a0
+                0x20000000                __bss_start__ = .
+ *(.bss*)
+ .bss           0x20000000        0x0 ./release/clock.o
+ .bss           0x20000000        0x0 ./release/gpio.o
+ .bss           0x20000000        0x0 ./release/timer.o
+ .bss           0x20000000        0x0 ./release/main.o
+ .bss           0x20000000        0x0 ./release/startup-gcc.o
+ .bss           0x20000000        0x0 c:/program files (x86)/codesourcery/sourcery g++ lite/bin/../lib/gcc/arm-none-eabi/4.3.2/thumb2\libgcc.a(_arm_addsubdf3.o)
+ .bss           0x20000000        0x0 c:/program files (x86)/codesourcery/sourcery g++ lite/bin/../lib/gcc/arm-none-eabi/4.3.2/thumb2\libgcc.a(_arm_muldivdf3.o)
+ .bss           0x20000000        0x0 c:/program files (x86)/codesourcery/sourcery g++ lite/bin/../lib/gcc/arm-none-eabi/4.3.2/thumb2\libgcc.a(_arm_truncdfsf2.o)
+ .bss           0x20000000        0x0 c:/program files (x86)/codesourcery/sourcery g++ lite/bin/../lib/gcc/arm-none-eabi/4.3.2/thumb2\libgcc.a(_arm_addsubsf3.o)
+ .bss           0x20000000        0x0 c:/program files (x86)/codesourcery/sourcery g++ lite/bin/../lib/gcc/arm-none-eabi/4.3.2/thumb2\libgcc.a(_arm_muldivsf3.o)
+ .bss           0x20000000        0x0 c:/program files (x86)/codesourcery/sourcery g++ lite/bin/../lib/gcc/arm-none-eabi/4.3.2/thumb2\libgcc.a(_arm_cmpsf2.o)
+ .bss           0x20000000        0x0 c:/program files (x86)/codesourcery/sourcery g++ lite/bin/../lib/gcc/arm-none-eabi/4.3.2/thumb2\libgcc.a(_arm_fixsfsi.o)
+ .bss           0x20000000        0x0 c:/program files (x86)/codesourcery/sourcery g++ lite/bin/../lib/gcc/arm-none-eabi/4.3.2/thumb2\libgcc.a(_arm_fixunssfsi.o)
+ *(COMMON)
+ COMMON         0x20000000        0xc ./release/timer.o
+                0x20000000                psc
+                0x20000004                arr
+                0x20000008                freq
+                0x2000000c                __bss_end__ = .
+
+.heap           0x20000010      0x800
+                0x20000010                __end__ = .
+                0x20000010                end = __end__
+                0x20000010                _end = __end__
+ *(.heap*)
+ .heap          0x20000010      0x800 ./release/startup-gcc.o
+                0x20000010                __HeapBase
+                0x20000810                __HeapLimit = .
+
+.stack_dummy    0x20000810      0xc00
+ *(.stack)
+ .stack         0x20000810      0xc00 ./release/startup-gcc.o
+                0x20005000                __StackTop = 0x20005000
+                0x20004400                __StackLimit = (__StackTop - SIZEOF (.stack_dummy))
+                0x20005000                PROVIDE (__stack, __StackTop)
+                0x00000001                ASSERT ((__StackLimit >= __HeapLimit), region RAM overflowed with stack)
+OUTPUT(./release/TP_GPIO.elf elf32-littlearm)
+
+.debug_abbrev   0x00000000      0x3b4
+ .debug_abbrev  0x00000000      0x118 ./release/clock.o
+ .debug_abbrev  0x00000118      0x10b ./release/gpio.o
+ .debug_abbrev  0x00000223       0xe3 ./release/timer.o
+ .debug_abbrev  0x00000306       0x9a ./release/main.o
+ .debug_abbrev  0x000003a0       0x14 ./release/startup-gcc.o
+
+.debug_info     0x00000000     0x1097
+ .debug_info    0x00000000      0x521 ./release/clock.o
+ .debug_info    0x00000521      0x276 ./release/gpio.o
+ .debug_info    0x00000797      0x438 ./release/timer.o
+ .debug_info    0x00000bcf      0x439 ./release/main.o
+ .debug_info    0x00001008       0x8f ./release/startup-gcc.o
+
+.debug_line     0x00000000      0x566
+ .debug_line    0x00000000      0x145 ./release/clock.o
+ .debug_line    0x00000145      0x138 ./release/gpio.o
+ .debug_line    0x0000027d      0x137 ./release/timer.o
+ .debug_line    0x000003b4      0x11e ./release/main.o
+ .debug_line    0x000004d2       0x94 ./release/startup-gcc.o
+
+.debug_frame    0x00000000      0x148
+ .debug_frame   0x00000000       0x70 ./release/clock.o
+ .debug_frame   0x00000070       0x78 ./release/gpio.o
+ .debug_frame   0x000000e8       0x30 ./release/timer.o
+ .debug_frame   0x00000118       0x30 ./release/main.o
+
+.debug_loc      0x00000000      0x176
+ .debug_loc     0x00000000       0x13 ./release/clock.o
+ .debug_loc     0x00000013       0xe9 ./release/gpio.o
+ .debug_loc     0x000000fc       0x5b ./release/timer.o
+ .debug_loc     0x00000157       0x1f ./release/main.o
+
+.debug_pubnames
+                0x00000000      0x166
+ .debug_pubnames
+                0x00000000       0x86 ./release/clock.o
+ .debug_pubnames
+                0x00000086       0x86 ./release/gpio.o
+ .debug_pubnames
+                0x0000010c       0x3f ./release/timer.o
+ .debug_pubnames
+                0x0000014b       0x1b ./release/main.o
+
+.debug_aranges  0x00000000       0xa0
+ .debug_aranges
+                0x00000000       0x20 ./release/clock.o
+ .debug_aranges
+                0x00000020       0x20 ./release/gpio.o
+ .debug_aranges
+                0x00000040       0x20 ./release/timer.o
+ .debug_aranges
+                0x00000060       0x20 ./release/main.o
+ .debug_aranges
+                0x00000080       0x20 ./release/startup-gcc.o
+
+.debug_str      0x00000000      0x38b
+ .debug_str     0x00000000      0x291 ./release/clock.o
+                                0x2d2 (size before relaxing)
+ .debug_str     0x00000291       0xa0 ./release/gpio.o
+                                0x17c (size before relaxing)
+ .debug_str     0x00000331       0x4a ./release/timer.o
+                                0x273 (size before relaxing)
+ .debug_str     0x0000037b       0x10 ./release/main.o
+                                0x23d (size before relaxing)
+
+.comment        0x00000000       0xa8
+ .comment       0x00000000       0x2a ./release/clock.o
+ .comment       0x0000002a       0x2a ./release/gpio.o
+ .comment       0x00000054       0x2a ./release/timer.o
+ .comment       0x0000007e       0x2a ./release/main.o
+
+.ARM.attributes
+                0x00000000       0x31
+ .ARM.attributes
+                0x00000000       0x31 ./release/clock.o
+ .ARM.attributes
+                0x00000031       0x31 ./release/gpio.o
+ .ARM.attributes
+                0x00000062       0x31 ./release/timer.o
+ .ARM.attributes
+                0x00000093       0x31 ./release/main.o
+ .ARM.attributes
+                0x000000c4       0x21 ./release/startup-gcc.o
+ .ARM.attributes
+                0x000000e5       0x17 c:/program files (x86)/codesourcery/sourcery g++ lite/bin/../lib/gcc/arm-none-eabi/4.3.2/thumb2\libgcc.a(_arm_addsubdf3.o)
+ .ARM.attributes
+                0x000000fc       0x17 c:/program files (x86)/codesourcery/sourcery g++ lite/bin/../lib/gcc/arm-none-eabi/4.3.2/thumb2\libgcc.a(_arm_muldivdf3.o)
+ .ARM.attributes
+                0x00000113       0x17 c:/program files (x86)/codesourcery/sourcery g++ lite/bin/../lib/gcc/arm-none-eabi/4.3.2/thumb2\libgcc.a(_arm_truncdfsf2.o)
+ .ARM.attributes
+                0x0000012a       0x17 c:/program files (x86)/codesourcery/sourcery g++ lite/bin/../lib/gcc/arm-none-eabi/4.3.2/thumb2\libgcc.a(_arm_addsubsf3.o)
+ .ARM.attributes
+                0x00000141       0x17 c:/program files (x86)/codesourcery/sourcery g++ lite/bin/../lib/gcc/arm-none-eabi/4.3.2/thumb2\libgcc.a(_arm_muldivsf3.o)
+ .ARM.attributes
+                0x00000158       0x17 c:/program files (x86)/codesourcery/sourcery g++ lite/bin/../lib/gcc/arm-none-eabi/4.3.2/thumb2\libgcc.a(_arm_cmpsf2.o)
+ .ARM.attributes
+                0x0000016f       0x17 c:/program files (x86)/codesourcery/sourcery g++ lite/bin/../lib/gcc/arm-none-eabi/4.3.2/thumb2\libgcc.a(_arm_fixsfsi.o)
+ .ARM.attributes
+                0x00000186       0x17 c:/program files (x86)/codesourcery/sourcery g++ lite/bin/../lib/gcc/arm-none-eabi/4.3.2/thumb2\libgcc.a(_arm_fixunssfsi.o)
