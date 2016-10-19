@@ -73,7 +73,7 @@
             <UserProg2Dos16Mode>0</UserProg2Dos16Mode>
           </BeforeMake>
           <AfterMake>
-            <RunUserProg1>0</RunUserProg1>
+            <RunUserProg1>1</RunUserProg1>
             <RunUserProg2>0</RunUserProg2>
             <UserProg1Name>"C:\Program Files (x86)\CodeSourcery\Sourcery G++ Lite\bin\arm-none-eabi-size.exe" release\*.elf</UserProg1Name>
             <UserProg2Name></UserProg2Name>
@@ -266,7 +266,7 @@
               <MiscControls></MiscControls>
               <Define>STM32F10X_MD</Define>
               <Undefine></Undefine>
-              <IncludePath>..\..\pilotes\src;..\..\pilotes\lib</IncludePath>
+              <IncludePath>..\..\pilotes\clock;.\src</IncludePath>
             </VariousControls>
           </Carm>
           <Aarm>
